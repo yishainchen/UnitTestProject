@@ -2,7 +2,7 @@
 //  Artwork.swift
 //  PercentageCalculator
 //
-//  Created by B1media on 2016/6/27.
+//  Created by B1media on 2016/6/ 27.
 //  Copyright © 2016年 App Coda. All rights reserved.
 //
 
@@ -27,5 +27,17 @@ class Artwork: NSObject, MKAnnotation  {
     
     var subtitle: String? {
         return locationName
+    }
+    
+    
+    // annotation callout info button opens this mapItem in Maps app
+    func mapItem() -> MKMapItem {
+        let addressDictionary = [String(kABPersonAddressStreetKey): subtitle as! AnyObject]
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDictionary)
+        
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = title
+        
+        return mapItem
     }
 }

@@ -88,11 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				22325BB71C62395E006879FF /* AppDelegate.swift */,
-				707F479E1D20F6F800A31323 /* VCMapView.swift */,
-				707F47A01D20F71600A31323 /* Artwork.swift */,
 				22325BB91C62395E006879FF /* ViewController.swift */,
-				707F47911D20EE8A00A31323 /* MapKitViewController.swift */,
-				707F479C1D20F51F00A31323 /* JSON.swift */,
+				707F47A21D2102C000A31323 /* Map */,
 				22325BBB1C62395E006879FF /* Main.storyboard */,
 				22325BBE1C62395E006879FF /* Assets.xcassets */,
 				707F47931D20F16300A31323 /* Support files */,
@@ -117,6 +114,17 @@
 				707F47941D20F17600A31323 /* PublicArt.json */,
 			);
 			name = "Support files";
+			sourceTree = "<group>";
+		};
+		707F47A21D2102C000A31323 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				707F479E1D20F6F800A31323 /* VCMapView.swift */,
+				707F47A01D20F71600A31323 /* Artwork.swift */,
+				707F47911D20EE8A00A31323 /* MapKitViewController.swift */,
+				707F479C1D20F51F00A31323 /* JSON.swift */,
+			);
+			name = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
