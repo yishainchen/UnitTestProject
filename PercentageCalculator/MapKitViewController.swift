@@ -19,13 +19,13 @@ class MapKitViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
+        let initialLocation = CLLocation(latitude: 25.075118, longitude: 121.515799)
         centerMapOnLocation(initialLocation)
         
         let artwork = Artwork(title: "King David Kalakaua",
                               locationName: "Waikiki Gateway Park",
                               discipline: "Sculpture",
-                              coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661))
+                              coordinate: CLLocationCoordinate2D(latitude: 25.075118, longitude: 121.515799))
         
         loadInitialData()
         mapView.addAnnotations(artworks)
@@ -74,8 +74,8 @@ class MapKitViewController: UIViewController {
     }
     // MARK: - location manager to authorize user location for Maps app
     var locationManager = CLLocationManager()
+    
     func checkLocationAuthorizationStatus() {
-        
         if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
             mapView.showsUserLocation = true
         } else {
@@ -83,6 +83,7 @@ class MapKitViewController: UIViewController {
         }
     }
     
+  
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         checkLocationAuthorizationStatus()

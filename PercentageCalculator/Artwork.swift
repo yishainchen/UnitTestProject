@@ -31,7 +31,6 @@ class Artwork: NSObject, MKAnnotation  {
         return locationName
     }
     
-    
     // annotation callout info button opens this mapItem in Maps app
     func mapItem() -> MKMapItem {
         let addressDictionary = [String(kABPersonAddressStreetKey): subtitle as! AnyObject]
