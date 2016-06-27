@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="m1q-5a-hA7">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Map Kit View Controller-->
+        <scene sceneID="zEs-pj-e8Z">
+            <objects>
+                <viewController id="m1q-5a-hA7" customClass="MapKitViewController" customModule="PercentageCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nhd-s0-RmI"/>
+                        <viewControllerLayoutGuide type="bottom" id="nAL-VD-WxL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HGf-5X-tdL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fLd-0C-yJl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fLd-0C-yJl" firstAttribute="leading" secondItem="HGf-5X-tdL" secondAttribute="leading" id="enU-xM-cUt"/>
+                            <constraint firstAttribute="trailing" secondItem="fLd-0C-yJl" secondAttribute="trailing" id="gxp-Mh-B3n"/>
+                            <constraint firstItem="fLd-0C-yJl" firstAttribute="bottom" secondItem="nAL-VD-WxL" secondAttribute="top" id="mmc-un-G06"/>
+                            <constraint firstItem="fLd-0C-yJl" firstAttribute="top" secondItem="HGf-5X-tdL" secondAttribute="top" id="wQE-qV-bOt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="fLd-0C-yJl" id="HgJ-59-XPs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrK-S7-f9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="433"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -79,17 +111,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="hKD-o5-zPu" secondAttribute="trailing" constant="21" id="2KS-eA-gb4"/>
                             <constraint firstItem="ZZd-rT-vgB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="G9z-Am-ZSZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gdt-wM-8EV" secondAttribute="trailing" constant="13" id="L8B-9t-4Td"/>
-                            <constraint firstItem="kEM-tl-eF6" firstAttribute="centerX" secondItem="vqs-Si-3Br" secondAttribute="centerX" id="LyM-FK-pU1"/>
                             <constraint firstItem="hKD-o5-zPu" firstAttribute="leading" secondItem="vqs-Si-3Br" secondAttribute="leadingMargin" constant="21" id="MP6-MQ-UlG"/>
                             <constraint firstItem="kEM-tl-eF6" firstAttribute="top" secondItem="gdt-wM-8EV" secondAttribute="bottom" constant="44" id="MYG-rr-2Bx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZZd-rT-vgB" secondAttribute="trailing" constant="21" id="NBm-fG-7OZ"/>
                             <constraint firstItem="ZZd-rT-vgB" firstAttribute="leading" secondItem="vqs-Si-3Br" secondAttribute="leadingMargin" constant="21" id="NR8-sk-Tks"/>
                             <constraint firstItem="gdt-wM-8EV" firstAttribute="top" secondItem="K4J-hA-oGL" secondAttribute="bottom" constant="8" id="QcN-gW-KIb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kEM-tl-eF6" secondAttribute="trailing" constant="21" id="TGK-gY-K0D"/>
                             <constraint firstItem="kEM-tl-eF6" firstAttribute="centerY" secondItem="vqs-Si-3Br" secondAttribute="centerY" id="VC8-YV-rif"/>
                             <constraint firstItem="kEM-tl-eF6" firstAttribute="trailing" secondItem="hKD-o5-zPu" secondAttribute="trailing" id="Vub-4V-FbU"/>
                             <constraint firstItem="1a4-a2-yUN" firstAttribute="leading" secondItem="vqs-Si-3Br" secondAttribute="leadingMargin" constant="17" id="XJf-q0-HUF"/>
-                            <constraint firstItem="kEM-tl-eF6" firstAttribute="leading" secondItem="vqs-Si-3Br" secondAttribute="leadingMargin" constant="21" id="YKc-y4-gzJ"/>
                             <constraint firstItem="1a4-a2-yUN" firstAttribute="top" secondItem="hKD-o5-zPu" secondAttribute="bottom" constant="61" id="c6J-vo-Cjo"/>
                             <constraint firstItem="gdt-wM-8EV" firstAttribute="top" secondItem="K4J-hA-oGL" secondAttribute="bottom" constant="8" id="d0T-C6-XIA"/>
                             <constraint firstItem="hKD-o5-zPu" firstAttribute="top" secondItem="kEM-tl-eF6" secondAttribute="bottom" constant="8" id="eTX-L0-44s"/>
@@ -98,13 +127,6 @@
                             <constraint firstItem="gdt-wM-8EV" firstAttribute="leading" secondItem="vqs-Si-3Br" secondAttribute="leadingMargin" constant="21" id="rfS-dh-VQP"/>
                             <constraint firstItem="K4J-hA-oGL" firstAttribute="leading" secondItem="vqs-Si-3Br" secondAttribute="leadingMargin" constant="17" id="rtF-Xq-Uuq"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="LyM-FK-pU1"/>
-                                <exclude reference="TGK-gY-K0D"/>
-                                <exclude reference="YKc-y4-gzJ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -117,6 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="347.73333333333335" y="433.10000000000002"/>
         </scene>
     </scenes>
 </document>
