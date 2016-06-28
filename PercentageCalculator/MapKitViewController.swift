@@ -4,7 +4,7 @@
 //
 //  Created by B1media on 2016/6/27.
 //  Copyright © 2016年 App Coda. All rights reserved.
-//
+
 
 import UIKit
 import MapKit
@@ -13,21 +13,23 @@ import AddressBook
 class MapKitViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
+    var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        let initialLocation = CLLocation(latitude: 25.075118, longitude: 121.515799)
-        centerMapOnLocation(initialLocation)
+//        let initialLocation = CLLocation(latitude: 25.075118, longitude: 121.515799)
+        centerMapOnLocation(locationManager.location!)
         
-        let artwork = Artwork(title: "King David Kalakaua",
-                              locationName: "Waikiki Gateway Park",
-                              discipline: "Sculpture",
-                              coordinate: CLLocationCoordinate2D(latitude: 25.075118, longitude: 121.515799))
+        let artwork = Artwork(title: "敦南",
+                              locationName: "誠品書店",
+                              discipline: "take a break",
+                              coordinate: CLLocationCoordinate2D(latitude: 25.039489, longitude: 121.549328))
         
         loadInitialData()
+        
         mapView.addAnnotations(artworks)
         mapView.addAnnotation(artwork)
         mapView.delegate = self
@@ -72,8 +74,10 @@ class MapKitViewController: UIViewController {
             }
         }
     }
+    
+
     // MARK: - location manager to authorize user location for Maps app
-    var locationManager = CLLocationManager()
+    
     
     func checkLocationAuthorizationStatus() {
         if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
